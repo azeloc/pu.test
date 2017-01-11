@@ -8,8 +8,9 @@ set -e
 git config --global user.email "fptcorrea@gmail.com"
 git config --global user.name "azeloc"
 
-git clone -b content https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git output
-cd output/content
+git clone -b content https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git out
+cd out
+cp -r ../content/* ./
 git add --all *
-git commit -m "Update the rep" || true
+git commit -m "Update the PU" || true
 git push origin content
