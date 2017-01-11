@@ -11,5 +11,6 @@ Imports: puBuild,
     stringr,
     purrr,
     dplyr,
-    tidyr
+    tidyr,
+    DT
 Remotes: azeloc/puBuild
